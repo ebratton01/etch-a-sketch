@@ -1,0 +1,133 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.sketch {
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 10vh;
+}
+
+.container {
+    /* margin-top: -5vh; */
+    margin-left: 35vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24pt;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+}
+  
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+  
+button,
+input[type='color'] {
+    transition: transform 0.1s ease-in-out;
+}
+  
+button:hover,
+input[type='color']:hover {
+    transform: scale(1.05);
+}
+  
+input[type='color']:active {
+    transition: transform 0.05s ease-in-out;
+    transform: scale(1);
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    border: 3px black solid;
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+}
+
+.grid-element {
+    user-select: none;
+  }
+
+.value {
+    font-size: large;
+}
+
+.slider {
+    width: 200px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+input[type=color] {
+    transform: translateX(-10px) translateY(-10px);
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 200%;
+    height: 200%;
+}
+
+.color-box {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px black solid;
+    height: 3vh;
+}
+
+button {
+    padding: 14px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: solid 1px black;
+
+}
